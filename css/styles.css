@@ -1,20 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #15202b;
+  background-color: #22303c;
+  color: antiquewhite;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  width: 95%;
+  padding: 30px;
+}
+
+.open {
+  height: 35vh;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: antiquewhite;
   transition: all 0.2s ease-in-out;
-  display: inline-block;
+  display: block;
 }
 
 a:active {
@@ -23,20 +40,22 @@ a:active {
 
 h1 {
   font-size: 35px;
+  text-transform: uppercase;
 }
 
 h2 {
-  color: #fff;
   font-size: 30px;
+  text-transform: uppercase;
 }
 
-.header {
-  color: #fff;
+#whole-page {
   height: 100vh;
   border-bottom: 1px solid #8899a6;
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   background-color: #192734;
   border-bottom: 1px solid #22303c;
   position: fixed;
@@ -45,24 +64,59 @@ header {
   left: 0;
 }
 
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  height: 60px;
-}
-
 #logo {
-  font-size: 40px;
+  font-size: 35px;
   text-transform: uppercase;
   font-weight: 800;
+  padding-left: 20px;
 }
 
-ul {
+#hamburger-menu {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  width: 30px;
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+
+#mid-line {
+  width: 60%;
+  transition: all 0.3s ease-in-out;
+}
+
+#hamburger-menu:hover #mid-line {
+  width: 100%;
+  background-color: #ffbf00;
+}
+
+nav {
+  height: auto;
+}
+nav ul {
+  text-align: center;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+nav ul li {
+  display: block;
+  padding: 10px;
+}
+
+#socials ul {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -73,6 +127,7 @@ ul li {
 ul li a {
   padding: 0.5em;
   color: #8899a6;
+  text-transform: uppercase;
 }
 
 li a:hover {
@@ -80,7 +135,7 @@ li a:hover {
 }
 
 .active {
-  color: #fff;
+  color: antiquewhite;
 }
 
 #showcase {
@@ -98,33 +153,32 @@ li a:hover {
   margin: 1rem;
   padding: 0.75em 1em;
   border-radius: 6px;
-  border: 1px solid #8899a6;
+  border: 1px solid antiquewhite;
   font-size: 20px;
   transition: all 0.5s ease;
+  text-align: center;
 }
 
 .btn:hover {
   background-color: #15202b;
 }
 
+#socials ul li:hover .fa {
+  color: antiquewhite;
+}
+
 /* About me section */
 #about-me {
-  background-color: #22303c;
   border-bottom: 1px solid #8899a6;
 }
 
-.container {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: space-between;
-  width: 90%;
-  padding: 30px;
+#about-me .container {
+  flex-direction: column;
+  justify-content: center;
 }
 
-.about-me-text p {
-  color: #8899a6;
+.about-me-text {
+  text-align: center;
 }
 
 .about-me-img img {
@@ -136,45 +190,82 @@ li a:hover {
 
 /* Projects Section */
 #projects {
-  background-color: #495c72;
+  background-color: #22303c;
 }
 
 #projects .container {
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr;
 }
 
 .card {
   background-color: #15202b;
   text-align: center;
-  padding: 0.5rem;
-  color: #fff;
+  padding: 0.75rem;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card h3 {
+  border-bottom: 1px solid antiquewhite;
+  padding-bottom: 0.25rem;
 }
 
 .card img {
+  display: block;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-top: 0.5rem;
+  margin: 1rem;
 }
-
-/* 
-background:  15202b
-card: 192734
-hover: 22303c
-primary text: fff
-secondary text: 8899a6
-
-*/
 
 @media all and (min-width: 600px) {
   #projects .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .line {
+    display: none;
+  }
+  nav ul {
+    height: auto;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  #about-me .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-me-text {
+    text-align: left;
+  }
+}
+
+@media all and (min-width: 1070px) {
+  #projects .container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

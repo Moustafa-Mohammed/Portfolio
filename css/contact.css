@@ -1,0 +1,37 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  padding: 30px;
+  color: antiquewhite;
+  width: 90%;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px #e7e7e79a;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+textarea,
+input {
+  background-color: antiquewhite;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  margin-top: 1rem;
+  display: inline-block;
+  width: 100%;
+  padding: 0.5em 1em;
+}
+
+input {
+  border-radius: 20px;
+}
+
+textarea {
+  border-radius: 8px;
+  min-height: 150px;
+}

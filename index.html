@@ -6,23 +6,29 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/styles.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<title>Document</title>
+
+	<script src="./js/main.js" defer></script>
+
+	<title>Home</title>
 </head>
 
 <body>
-	<section class="header">
+	<section id="whole-page">
 		<header>
+			<div><a href="index.html" id="logo">logo</a></div>
+
+			<div id="hamburger-menu">
+				<div class="line"></div>
+				<div class="line" id="mid-line"></div>
+				<div class="line"></div>
+			</div>
 			<nav>
-				<div><a href="index.html" id="logo">logo</a></div>
 				<ul>
 					<li><a href="#about-me" class="active">About me</a></li>
 					<li><a href="#projects">Projects</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="./contact.html">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -30,7 +36,7 @@
 		<div id="showcase">
 			<h1>Mostafa Mohamed</h1>
 			<p>Junior Frontend Developer</p>
-			<div class="socials">
+			<div id="socials">
 				<ul>
 					<li class="facebook"><a target=”_blank” href="https://www.facebook.com/MostafaMohamed1992/"><i
 								class="fa fa-facebook fa-2x" aria-hidden="false"></i></a></li>
@@ -46,15 +52,17 @@
 
 	<section id="about-me">
 		<div class="container">
+			<div class="about-me-img">
+				<img src="./images/Mostafa.jpg" alt="">
+			</div>
 			<div class="about-me-text">
 				<h2>About me</h2>
 				<p>Hello, my name is <strong>Mostafa Mohamed</strong>. I am a <strong> Frontend Developer</strong> with a
 					passion for making the web look
-					good
+					good. Junior Front-end Developer specializing in front end development. Well-versed in web development
+					languages and libraries including HTML5, CSS3, TailwindCSS, JavaScript, and ReactJS as well as version control
+					system such as Git and GitHub.
 				</p>
-			</div>
-			<div class="about-me-img">
-				<img src="./images/Mostafa.jpg" alt="">
 			</div>
 		</div>
 
@@ -62,27 +70,35 @@
 	<section id="projects">
 		<div class="container">
 			<div class="card">
-				<h3>3-column-preview-card</h3>
+				<h3>3-column-card</h3>
 				<img src="./images/3-column-card.jpg" alt="">
-				<a href="" class="btn">Visit website</a>
+				<a href="https://moustafa-mohammed.github.io/3-column-preview-card-component/" target="_blank" class="btn">Visit
+					website</a>
 			</div>
 
 			<div class="card">
-				<h3>3-column-preview-card</h3>
-				<img src="./images/3-column-card.jpg" alt="">
-				<a href="" class="btn">Visit website</a>
+				<h3>ToDo List</h3>
+				<img src="./images/todo-list.jpg" alt="">
+				<a href="https://add-todos.netlify.app/" target="_blank" class="btn">Visit website</a>
 			</div>
 
 			<div class="card">
-				<h3>3-column-preview-card</h3>
-				<img src="./images/3-column-card.jpg" alt="">
-				<a href="" class="btn">Visit website</a>
+				<h3>Questions App</h3>
+				<img src="./images/questions.png" alt="">
+				<a href="https://moustafa-mohammed.github.io/questions-app/" target="_blank" class="btn">Visit website</a>
 			</div>
 
+			<div class="card">
+				<h3>Calculator App</h3>
+				<img src="./images/calculator.png" alt="">
+				<a href="https://to-calculate.netlify.app/" target="_blank" class="btn">Visit website</a>
+			</div>
 		</div>
 	</section>
 
 	<footer></footer>
+
+
 </body>
 
 </html>
